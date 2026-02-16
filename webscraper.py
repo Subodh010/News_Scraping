@@ -5,6 +5,7 @@ import time
 
 keywords = ["election", "voters", "voting", "politics"]
 websites = [
+    #some urls like ekantipur dont work
     "https://kathmandupost.com",
     "https://ekantipur.com",
     "https://www.thehimalayantimes.com"
@@ -75,6 +76,7 @@ for site in websites:
     sitename = clean_site[8:]
     filename = sitename + ".json"
     
+    #add to json file
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(articles, f, indent=2, ensure_ascii=False)
     
